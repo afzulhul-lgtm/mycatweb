@@ -1,0 +1,145 @@
+[
+    {
+        "id": 1,
+        "title": "Dog Food Recalled Due to Potential Plastic Contamination",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image1.jpg",
+        "filename": "dog-food-recalled-due-to-potential-plastic-contamination-1.html",
+        "excerpt": "Protect your pet's health with our comprehensive guide on dog food recalls due to potential plastic contamination, providing expert veterinary advice and care tips."
+    },
+    {
+        "id": 2,
+        "title": "The Ultimate Gift Guide for Dog Lovers &amp; Dogs",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image2.jpg",
+        "filename": "the-ultimate-gift-guide-for-dog-lovers-amp-dogs-2.html",
+        "excerpt": "Get the best gifts for dog lovers and dogs with our ultimate guide, featuring expert veterinary advice and top presents for a happy, healthy pet."
+    },
+    {
+        "id": 3,
+        "title": "9 Dog Treat Recipes Perfect for Thanksgiving",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image3.jpg",
+        "filename": "9-dog-treat-recipes-perfect-for-thanksgiving-3.html",
+        "excerpt": "Discover 9 delicious and healthy Thanksgiving dog treat recipes to make your furry friend's holiday special."
+    },
+    {
+        "id": 4,
+        "title": "11 Tips to Pet-Proof Your Christmas Tree",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image4.jpg",
+        "filename": "11-tips-to-pet-proof-your-christmas-tree-4.html",
+        "excerpt": "Protect your pets from Christmas tree hazards with our expert tips and advice on dog proof Christmas tree decorations and holiday pet safety."
+    },
+    {
+        "id": 5,
+        "title": "Can Dogs Eat Chocolate? What You NEED to Know!",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image5.jpg",
+        "filename": "can-dogs-eat-chocolate-what-you-need-to-know-5.html",
+        "excerpt": "Can dogs eat chocolate? Learn the dangers of chocolate toxicity in dogs and how to prevent it with our expert pet care advice."
+    },
+    {
+        "id": 6,
+        "title": "Dog Burn Warning: Always Test Garden Hose Water Before Playtime",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image6.jpg",
+        "filename": "dog-burn-warning-always-test-garden-hose-water-before-playtime-6.html",
+        "excerpt": "Protect your dog from burns with our expert guide on garden hose safety, learn how to prevent hot water burns and ensure summer dog safety."
+    },
+    {
+        "id": 7,
+        "title": "Becoming A Senior Dog: Top 12 Signs Your Pooch Is Aging",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image7.jpg",
+        "filename": "becoming-a-senior-dog-top-12-signs-your-pooch-is-aging-7.html",
+        "excerpt": "As your dog ages, learn the top 12 signs of senior doghood and get expert advice on caring for your aging pooch."
+    },
+    {
+        "id": 8,
+        "title": "Buckle Up, Pup! Road Trip Safety &amp; Essentials for Your Dog",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image8.jpg",
+        "filename": "buckle-up-pup-road-trip-safety-amp-essentials-for-your-dog-8.html",
+        "excerpt": "Buckle up for a safe and fun dog road trip with expert veterinary advice on car travel, seat belts, and pet essentials."
+    },
+    {
+        "id": 9,
+        "title": "How Much Exercise Does Your Dog Need?",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image9.jpg",
+        "filename": "how-much-exercise-does-your-dog-need-9.html",
+        "excerpt": "Get expert advice on dog exercise needs and keep your furry friend happy and healthy."
+    },
+    {
+        "id": 10,
+        "title": "Cloudy Eyes in Dogs: What It Means and When to Worry",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image10.jpg",
+        "filename": "cloudy-eyes-in-dogs-what-it-means-and-when-to-worry-10.html",
+        "excerpt": "Cloudy eyes in dogs: Learn about canine cataracts, nuclear sclerosis, and when to see a vet for dog eye problems."
+    },
+    {
+        "id": 11,
+        "title": "6 Ways To Give Your Dog More Mental Stimulation",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image11.jpg",
+        "filename": "6-ways-to-give-your-dog-more-mental-stimulation-11.html",
+        "excerpt": "Mental stimulation for dogs is crucial for their health and happiness. Learn how to provide your dog with the mental stimulation they need."
+    },
+    {
+        "id": 12,
+        "title": "8 Ways To Socialize Your New Puppy",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image12.jpg",
+        "filename": "8-ways-to-socialize-your-new-puppy-12.html",
+        "excerpt": "Socialize your new puppy with our expert tips and tricks for a happy and healthy dog, covering puppy socialization tips, training, and behavior."
+    },
+    {
+        "id": 13,
+        "title": "20 Most Popular Dog Breeds",
+        "date": "02 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dog Breeds",
+        "image": "image13.jpg",
+        "filename": "20-most-popular-dog-breeds-13.html",
+        "excerpt": "Discover the top 20 most popular dog breeds and learn expert pet care tips to keep your furry friend happy and healthy."
+    }
+]

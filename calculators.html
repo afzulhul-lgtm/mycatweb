@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pet Calculators | Weight, Food & Breed Tools | PetPedia</title>
+    
+    <meta name="title" content="Advanced Pet Calculators | Weight, Food & Breed Tools | PetPedia">
+    <meta name="description" content="Calculate your cat and dog's ideal weight, daily food calories, and breed-specific costs with our free, advanced pet calculators.">
+    <meta name="keywords" content="dog weight calculator, cat food calculator, dog breed calculator, cat breed traits, pet care tools, PetPedia calculators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://petpediahub.online/calculators.html" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+    <link rel="stylesheet" href="/style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .calc-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .section-header {
+            text-align: center;
+            margin: 50px 0 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px dashed #eee;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #222;
+        }
+        .section-header p {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* 3-Column Grid System */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        @media(max-width: 992px) {
+            .calc-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media(max-width: 768px) {
+            .calc-grid { grid-template-columns: 1fr; }
+        }
+
+        .calc-card {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .calc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        /* Theming for Cats (Pinkish) & Dogs (Reddish) */
+        .cat-card { border-top: 5px solid #ff9a9e; }
+        .dog-card { border-top: 5px solid #e1306c; }
+
+        .calc-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .cat-card .calc-icon { color: #ff9a9e; }
+        .dog-card .calc-icon { color: #e1306c; }
+
+        .calc-title {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .form-group { margin-bottom: 18px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .cat-card .form-group select:focus, .cat-card .form-group input:focus { border-color: #ff9a9e; }
+        .dog-card .form-group select:focus, .dog-card .form-group input:focus { border-color: #e1306c; }
+
+        .calc-btn {
+            width: 100%;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: auto;
+        }
+        .cat-card .calc-btn { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #333; }
+        .dog-card .calc-btn { background: linear-gradient(135deg, #e1306c, #c2255c); }
+        .calc-btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+        }
+        .res-highlight {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+        }
+        .cat-card .res-highlight { color: #ff6b81; }
+        .dog-card .res-highlight { color: #e1306c; }
+
+        /* Dark Mode */
+        [data-theme="dark"] .calc-card { background: #1e1e1e; border-color: #444; }
+        [data-theme="dark"] .cat-card { border-top-color: #ff9a9e; }
+        [data-theme="dark"] .dog-card { border-top-color: #e1306c; }
+        [data-theme="dark"] .section-header h2, [data-theme="dark"] .calc-title { color: #fff; }
+        [data-theme="dark"] .form-group label { color: #bbb; }
+        [data-theme="dark"] .form-group select, [data-theme="dark"] .form-group input { background: #2a2a2a; color: #fff; border-color: #444; }
+        [data-theme="dark"] .result-box { background: #222; border-color: #333; color: #ddd; }
+    </style>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+<body>
+    <script>if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+<div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-paw"></i> PET TIPS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1>🐾 PetPedia</h1></a>
+                </div>
+                 <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="dogs.html">Dogs</a></li>
+                        <li><a href="cats.html">Cats</a></li>
+                        <li><a href="dog-breeds.html">Dog Breeds</a></li>
+                        <li><a href="cat-breeds.html">Cat Breeds</a></li>
+                        <li><a href="calculators.html">Calculator</a></li>
+                        <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container calc-wrapper">
+
+        <div class="section-header">
+            <h2>🐈 Cat Calculators</h2>
+            <p>Weight, Food & Breed tools tailored specifically for felines.</p>
+        </div>
+
+        <div class="calc-grid">
+            <div class="calc-card cat-card">
+                <div class="calc-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3 class="calc-title">Cat Weight Checker</h3>
+                <div class="form-group">
+                    <label>Cat Breed</label>
+                    <select id="cat-w-breed">
+                        <option value="domestic">Domestic Shorthair</option>
+                        <option value="persian">Persian</option>
+                        <option value="maine_coon">Maine Coon</option>
+                        <option value="siamese">Siamese</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Current Weight (kg)</label>
+                    <input type="number" id="cat-w-kg" step="0.1" placeholder="e.g. 4.5">
+                </div>
+                <button class="calc-btn" onclick="calcCatWeight()">Check Weight</button>
+                <div class="result-box" id="cat-w-res"></div>
+            </div>
+
+            <div class="calc-card cat-card">
+                <div class="calc-icon"><i class="fas fa-fish"></i></div>
+                <h3 class="calc-title">Cat Food / Calorie</h3>
+                <div class="form-group">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="cat-f-kg" step="0.1" placeholder="e.g. 4.5">
+                </div>
+                <div class="form-group">
+                    <label>Activity Level</label>
+                    <select id="cat-f-act">
+                        <option value="1.0">Indoor / Lazy</option>
+                        <option value="1.2" selected>Normal / Active</option>
+                        <option value="1.4">Highly Active / Kitten</option>
+                    </select>
+                </div>
+                <button class="calc-btn" onclick="calcCatFood()">Calculate Calories</button>
+                <div class="result-box" id="cat-f-res"></div>
+            </div>
+
+            <div class="calc-card cat-card">
+                <div class="calc-icon"><i class="fas fa-info-circle"></i></div>
+                <h3 class="calc-title">Cat Breed Info & Cost</h3>
+                <div class="form-group">
+                    <label>Select Breed</label>
+                    <select id="cat-b-breed">
+                        <option value="domestic">Domestic Shorthair</option>
+                        <option value="persian">Persian</option>
+                        <option value="maine_coon">Maine Coon</option>
+                        <option value="bengal">Bengal</option>
+                    </select>
+                </div>
+                <button class="calc-btn" onclick="calcCatBreed()">Get Breed Details</button>
+                <div class="result-box" id="cat-b-res" style="text-align: left; font-size: 0.9rem;"></div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 60px;">
+            <h2>🐕 Dog Calculators</h2>
+            <p>Weight, Food & Breed tools tailored specifically for canines.</p>
+        </div>
+
+        <div class="calc-grid">
+            <div class="calc-card dog-card">
+                <div class="calc-icon"><i class="fas fa-weight"></i></div>
+                <h3 class="calc-title">Dog Weight Checker</h3>
+                <div class="form-group">
+                    <label>Dog Breed Size</label>
+                    <select id="dog-w-breed">
+                        <option value="small">Small (e.g. Pug, Chihuahua)</option>
+                        <option value="medium">Medium (e.g. Beagle)</option>
+                        <option value="large">Large (e.g. Labrador)</option>
+                        <option value="giant">Giant (e.g. Great Dane)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Current Weight (kg)</label>
+                    <input type="number" id="dog-w-kg" step="0.1" placeholder="e.g. 25">
+                </div>
+                <button class="calc-btn" onclick="calcDogWeight()">Check Weight</button>
+                <div class="result-box" id="dog-w-res"></div>
+            </div>
+
+            <div class="calc-card dog-card">
+                <div class="calc-icon"><i class="fas fa-bone"></i></div>
+                <h3 class="calc-title">Dog Food / Calorie</h3>
+                <div class="form-group">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="dog-f-kg" step="0.1" placeholder="e.g. 20">
+                </div>
+                <div class="form-group">
+                    <label>Activity Level</label>
+                    <select id="dog-f-act">
+                        <option value="1.2">Low Activity / Senior</option>
+                        <option value="1.6" selected>Normal Adult</option>
+                        <option value="2.0">Working / Highly Active</option>
+                    </select>
+                </div>
+                <button class="calc-btn" onclick="calcDogFood()">Calculate Calories</button>
+                <div class="result-box" id="dog-f-res"></div>
+            </div>
+
+            <div class="calc-card dog-card">
+                <div class="calc-icon"><i class="fas fa-paw"></i></div>
+                <h3 class="calc-title">Dog Breed Info & Cost</h3>
+                <div class="form-group">
+                    <label>Select Breed</label>
+                    <select id="dog-b-breed">
+                        <option value="german_shepherd">German Shepherd</option>
+                        <option value="golden_retriever">Golden Retriever</option>
+                        <option value="pug">Pug</option>
+                        <option value="husky">Siberian Husky</option>
+                    </select>
+                </div>
+                <button class="calc-btn" onclick="calcDogBreed()">Get Breed Details</button>
+                <div class="result-box" id="dog-b-res" style="text-align: left; font-size: 0.9rem;"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer" style="background: #f8f9fa; padding: 40px 0 20px; border-top: 1px solid #eee; margin-top: 60px;">
+        <div class="container">
+            <div class="copyright" style="text-align: center; color: #888; font-size: 0.9rem;">
+                <p>&copy; 2026 PetPedia Hub - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ---------------- CAT LOGIC ---------------- //
+        const catWeightData = {
+            "domestic": { min: 3.5, max: 5.5 },
+            "persian": { min: 3.0, max: 5.5 },
+            "maine_coon": { min: 5.0, max: 8.5 },
+            "siamese": { min: 3.0, max: 5.0 }
+        };
+
+        const catBreedData = {
+            "domestic": { life: "12-15 yrs", traits: "Playful, Adaptable", cost: "$40 - $60/mo" },
+            "persian": { life: "10-15 yrs", traits: "Quiet, Affectionate", cost: "$60 - $80/mo (Grooming)" },
+            "maine_coon": { life: "12-15 yrs", traits: "Gentle Giant, Smart", cost: "$70 - $90/mo (Food)" },
+            "bengal": { life: "12-16 yrs", traits: "Energetic, Vocal", cost: "$50 - $70/mo" }
+        };
+
+        function calcCatWeight() {
+            let breed = document.getElementById('cat-w-breed').value;
+            let kg = parseFloat(document.getElementById('cat-w-kg').value);
+            if(!kg) return;
+            
+            let data = catWeightData[breed];
+            let status = "";
+            if(kg < data.min) status = "Underweight ⚠️";
+            else if(kg > data.max) status = "Overweight 🔴";
+            else status = "Perfect / Healthy 🟢";
+
+            let res = document.getElementById('cat-w-res');
+            res.innerHTML = `Ideal range: ${data.min} - ${data.max} kg <br> <span class="res-highlight">${status}</span>`;
+            res.style.display = 'block';
+        }
+
+        function calcCatFood() {
+            let kg = parseFloat(document.getElementById('cat-f-kg').value);
+            let act = parseFloat(document.getElementById('cat-f-act').value);
+            if(!kg) return;
+
+            let rer = 70 * Math.pow(kg, 0.75);
+            let cals = Math.round(rer * act);
+
+            let res = document.getElementById('cat-f-res');
+            res.innerHTML = `Daily Requirement: <br> <span class="res-highlight">${cals} kcal</span>`;
+            res.style.display = 'block';
+        }
+
+        function calcCatBreed() {
+            let breed = document.getElementById('cat-b-breed').value;
+            let data = catBreedData[breed];
+            let res = document.getElementById('cat-b-res');
+            
+            res.innerHTML = `
+                <strong>Lifespan:</strong> ${data.life} <br><br>
+                <strong>Key Traits:</strong> ${data.traits} <br><br>
+                <strong>Est. Maintenance:</strong> <span class="res-highlight" style="font-size:1.1rem; display:inline;">${data.cost}</span>
+            `;
+            res.style.display = 'block';
+        }
+
+        // ---------------- DOG LOGIC ---------------- //
+        const dogWeightData = {
+            "small": { min: 2, max: 10 },
+            "medium": { min: 11, max: 25 },
+            "large": { min: 26, max: 40 },
+            "giant": { min: 41, max: 80 }
+        };
+
+        const dogBreedData = {
+            "german_shepherd": { life: "9-13 yrs", traits: "Loyal, Guard Dog", cost: "$120 - $150/mo" },
+            "golden_retriever": { life: "10-12 yrs", traits: "Friendly, Family-oriented", cost: "$100 - $130/mo" },
+            "pug": { life: "12-15 yrs", traits: "Charming, Stubborn", cost: "$80 - $110/mo (Vet visits)" },
+            "husky": { life: "12-14 yrs", traits: "Vocal, Energetic", cost: "$110 - $140/mo" }
+        };
+
+        function calcDogWeight() {
+            let breed = document.getElementById('dog-w-breed').value;
+            let kg = parseFloat(document.getElementById('dog-w-kg').value);
+            if(!kg) return;
+            
+            let data = dogWeightData[breed];
+            let status = "";
+            if(kg < data.min) status = "Underweight ⚠️";
+            else if(kg > data.max) status = "Overweight 🔴";
+            else status = "Normal Range 🟢";
+
+            let res = document.getElementById('dog-w-res');
+            res.innerHTML = `Avg size range: ${data.min} - ${data.max} kg <br> <span class="res-highlight">${status}</span>`;
+            res.style.display = 'block';
+        }
+
+        function calcDogFood() {
+            let kg = parseFloat(document.getElementById('dog-f-kg').value);
+            let act = parseFloat(document.getElementById('dog-f-act').value);
+            if(!kg) return;
+
+            let rer = 70 * Math.pow(kg, 0.75);
+            let cals = Math.round(rer * act);
+
+            let res = document.getElementById('dog-f-res');
+            res.innerHTML = `Daily Requirement: <br> <span class="res-highlight">${cals} kcal</span>`;
+            res.style.display = 'block';
+        }
+
+        function calcDogBreed() {
+            let breed = document.getElementById('dog-b-breed').value;
+            let data = dogBreedData[breed];
+            let res = document.getElementById('dog-b-res');
+            
+            res.innerHTML = `
+                <strong>Lifespan:</strong> ${data.life} <br><br>
+                <strong>Key Traits:</strong> ${data.traits} <br><br>
+                <strong>Est. Maintenance:</strong> <span class="res-highlight" style="font-size:1.1rem; display:inline;">${data.cost}</span>
+            `;
+            res.style.display = 'block';
+        }
+    </script>
+    <script src="/script.js?v=4.0"></script>
+</body>
+</html>
