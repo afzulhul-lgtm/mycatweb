@@ -141,5 +141,115 @@
         "image": "image13.webp",
         "filename": "20-most-popular-dog-breeds-13.html",
         "excerpt": "Discover the top 20 most popular dog breeds and get expert advice on their care, health, and behavior."
+    },
+    {
+        "id": 14,
+        "title": "Top Tips for Keeping Indoor Cats Safe Outside",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image14.webp",
+        "filename": "top-tips-for-keeping-indoor-cats-safe-outside-14.html",
+        "excerpt": "Keep your indoor cat safe outside with our expert tips and advice on outdoor safety, health risks, and more."
+    },
+    {
+        "id": 15,
+        "title": "11 Stunning Black Cat Breeds That Deserve a Place in Your Heart",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cat Breeds",
+        "image": "image15.webp",
+        "filename": "11-stunning-black-cat-breeds-that-deserve-a-place-in-your-heart-15.html",
+        "excerpt": "Discover 11 stunning black cat breeds & learn expert pet care tips to keep your feline friend happy & healthy."
+    },
+    {
+        "id": 16,
+        "title": "9 Gorgeous Grey Cat Breeds (With Pictures)",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cat Breeds",
+        "image": "image16.webp",
+        "filename": "9-gorgeous-grey-cat-breeds-with-pictures-16.html",
+        "excerpt": "Discover the beauty of grey cat breeds with our comprehensive guide, featuring 9 stunning breeds, care tips, and expert advice for a happy, healthy pet."
+    },
+    {
+        "id": 17,
+        "title": "What Is Catnip? Why Cats Like It",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image17.webp",
+        "filename": "what-is-catnip-why-cats-like-it-17.html",
+        "excerpt": "Discover the wonders of catnip and its effects on your feline friend's behavior and health."
+    },
+    {
+        "id": 18,
+        "title": "How To Deal With Food Aggression in Cats",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image18.webp",
+        "filename": "how-to-deal-with-food-aggression-in-cats-18.html",
+        "excerpt": "Dealing with food aggression in cats: expert veterinary advice and solutions."
+    },
+    {
+        "id": 19,
+        "title": "10 Signs Your Cat Is Obsessed With You",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image19.webp",
+        "filename": "10-signs-your-cat-is-obsessed-with-you-19.html",
+        "excerpt": "Discover the top signs your cat is obsessed with you and learn how to nurture a deeper bond with your feline friend."
+    },
+    {
+        "id": 20,
+        "title": "6 Tips for Maximizing Pet Insurance Benefits for Your Cat",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image20.webp",
+        "filename": "6-tips-for-maximizing-pet-insurance-benefits-for-your-cat-20.html",
+        "excerpt": "Maximize your cat's health with our expert guide to pet insurance, covering benefits, claims, and affordable plans."
+    },
+    {
+        "id": 21,
+        "title": "7 Subtle Ways You Might Be Offending Your Cat",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image21.webp",
+        "filename": "7-subtle-ways-you-might-be-offending-your-cat-21.html",
+        "excerpt": "As a responsible pet owner, learn the subtle ways you might be offending your cat and how to improve your relationship with them."
+    },
+    {
+        "id": 22,
+        "title": "Research Proves Owning a Cat Is Good for Your Heart",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image22.webp",
+        "filename": "research-proves-owning-a-cat-is-good-for-your-heart-22.html",
+        "excerpt": "Research proves owning a cat is good for your heart, reducing stress and anxiety while promoting emotional wellbeing."
+    },
+    {
+        "id": 23,
+        "title": "Why Does My Cat Attack My Feet?",
+        "date": "06 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Cats",
+        "image": "image23.webp",
+        "filename": "why-does-my-cat-attack-my-feet-23.html",
+        "excerpt": "Why does my cat attack my feet? Learn expert tips to stop cat aggression and understand cat behavior."
     }
 ]
