@@ -251,5 +251,115 @@
         "image": "image23.webp",
         "filename": "why-does-my-cat-attack-my-feet-23.html",
         "excerpt": "Why does my cat attack my feet? Learn expert tips to stop cat aggression and understand cat behavior."
+    },
+    {
+        "id": 24,
+        "title": "Puppy Barking: Why it Happens and How To Help Your Puppy Settle",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image24.webp",
+        "filename": "puppy-barking-why-it-happens-and-how-to-help-your-puppy-settle-24.html",
+        "excerpt": "Puppy barking solutions: Learn why puppies bark and how to stop excessive barking with our expert veterinary advice and pet care tips."
+    },
+    {
+        "id": 25,
+        "title": "How Dogs Improve the Mental Health of Those in Rural Areas",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image25.webp",
+        "filename": "how-dogs-improve-the-mental-health-of-those-in-rural-areas-25.html",
+        "excerpt": "Dogs improve mental health in rural areas, reducing loneliness and depression with unconditional love and companionship, explore the benefits and expert veterinary advice."
+    },
+    {
+        "id": 26,
+        "title": "Rainy Day Dog-Walking Essentials",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image26.webp",
+        "filename": "rainy-day-dog-walking-essentials-26.html",
+        "excerpt": "Rainy day dog-walking essentials: Gear up for safe and dry walks with our expert guide."
+    },
+    {
+        "id": 27,
+        "title": "8 Ways Dogs Influence Their Owners",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image27.webp",
+        "filename": "8-ways-dogs-influence-their-owners-27.html",
+        "excerpt": "Dogs influence owners in many ways, from exercise to mental health, and social life. Discover how dogs change your life."
+    },
+    {
+        "id": 28,
+        "title": "Tips to Stop Unwanted Dog Jumping",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image28.webp",
+        "filename": "tips-to-stop-unwanted-dog-jumping-28.html",
+        "excerpt": "Stop unwanted dog jumping with our expert vet advice and training tips to ensure a calm and safe environment for you and your pet."
+    },
+    {
+        "id": 29,
+        "title": "How Service Dogs Can Help Kids with Autism and ADHD",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image29.webp",
+        "filename": "how-service-dogs-can-help-kids-with-autism-and-adhd-29.html",
+        "excerpt": "Service dogs for autism & ADHD: Discover how they can help kids with special needs, providing emotional support, safety, and social interaction benefits."
+    },
+    {
+        "id": 30,
+        "title": "Most Famous K9 Cops of All Time",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image30.webp",
+        "filename": "most-famous-k9-cops-of-all-time-30.html",
+        "excerpt": "Discover the most famous K9 cops in history, their bravery, and heroic stories, and learn how to care for your own canine companion."
+    },
+    {
+        "id": 31,
+        "title": "How to Calm Your Dog in Stressful Situations",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image31.webp",
+        "filename": "how-to-calm-your-dog-in-stressful-situations-31.html",
+        "excerpt": "Calming anxious dogs: expert tips and advice from a veterinarian on stress relief, calming signals, and natural calmers for a happier pet."
+    },
+    {
+        "id": 32,
+        "title": "Illnesses You Can Get from Dogs & How to Prevent Them",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image32.webp",
+        "filename": "illnesses-you-can-get-from-dogs-how-to-prevent-them-32.html",
+        "excerpt": "Protect your family from zoonotic diseases with our expert guide on illnesses transmitted from dogs and prevention tips."
+    },
+    {
+        "id": 33,
+        "title": "How Dental Health is Key to a Long Life for Your Pet",
+        "date": "10 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "image33.webp",
+        "filename": "how-dental-health-is-key-to-a-long-life-for-your-pet-33.html",
+        "excerpt": "Improving dog dental health for a longer, happier life: expert tips and advice."
     }
 ]
