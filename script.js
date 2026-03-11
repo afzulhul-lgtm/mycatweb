@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     highlightActiveMenu();
     updateInnerArticleDate();
     
+    // Yahan Articles instant load honge
     await loadArticlesFast(); 
     
     const homeContainer = document.getElementById('articles-container');
@@ -55,6 +56,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     setupCopyLinkButtons();
     initLiveSearchSystem(); 
     initTopBarFeatures(); 
+
+    // 🔴 SCROLL MEMORY RESTORE (Instantly goes back to exact position) 🔴
+    setTimeout(() => {
+        const savedScroll = sessionStorage.getItem('scroll_' + pageKey);
+        if (savedScroll && !isArticlePage) {
+            window.scrollTo({ top: parseInt(savedScroll), behavior: 'instant' });
+        }
+    }, 50);
     
     // SEO Enhancement: Delay non-critical popup so main content renders faster
     setTimeout(initNotificationPopup, 4500);
@@ -115,12 +124,24 @@ function updateInnerArticleDate() {
     }
 }
 
+// 🔴 INSTANT LOAD FIX ADDED HERE 🔴
 async function loadArticlesFast() {
     try {
+        // 1. Session Storage se fast load (0 wait time)
+        const cachedData = sessionStorage.getItem('cached_techvibe_data');
+        if (cachedData) {
+            allArticles = JSON.parse(cachedData);
+        }
+
+        // 2. Background mein network se naya data laana
         const response = await fetch(basePath + 'data.json?v=' + new Date().getTime());
         if (response.ok) {
-            allArticles = await response.json();
-            allArticles.sort((a, b) => b.id - a.id); 
+            const freshArticles = await response.json();
+            freshArticles.sort((a, b) => b.id - a.id); 
+            
+            allArticles = freshArticles;
+            // Cache update kar diya for next time
+            sessionStorage.setItem('cached_techvibe_data', JSON.stringify(allArticles));
         }
     } catch (e) {
         console.error("Error loading articles:", e);
@@ -146,14 +167,16 @@ function renderArticles(container, filter) {
 
     const articlesHTML = paginatedItems.map(art => {
         let imgSrc = art.image.startsWith('http') ? art.image : `${linkPrefix}${art.image}`;
+        
+        // 🔴 ONCLICK MEIN SCROLL POSITION SAVE KARNE KA CODE ADD KIYA HAI 🔴
         return `
             <article class="news-card">
-                <div class="article-image" onclick="window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">
+                <div class="article-image" onclick="sessionStorage.setItem('scroll_' + pageKey, window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">
                     <img src="${imgSrc}" alt="${art.title}" loading="lazy" decoding="async">
                 </div>
                 <div class="news-content">
                     <span class="article-category">${art.category}</span>
-                    <h3 class="news-title" onclick="window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">${art.title}</h3>
+                    <h3 class="news-title" onclick="sessionStorage.setItem('scroll_' + pageKey, window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">${art.title}</h3>
                     <p class="news-excerpt">${art.excerpt || 'Click here to read the full pet care guide and detailed information...'}</p>
                     <div class="news-meta">
                         <a href="${rootPrefix}${config.authorProfileLink}" style="display:flex; align-items:center; gap:5px; text-decoration:none; color:inherit; transition: color 0.3s;" class="author-hover">
@@ -331,7 +354,6 @@ function setupCopyLinkButtons() {
     });
 }
 
-// YAHAN MAIN ARTICLE KE ANDAR WALE AUTHOR HEADER KO BHI CLICKABLE BANAYA HAI
 function injectHeaderAuthorPic() {
     if (!isArticlePage) return;
     const headerImg = document.getElementById('header-author-img');
