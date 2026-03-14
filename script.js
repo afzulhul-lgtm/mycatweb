@@ -6,12 +6,15 @@ const config = {
     authorName: 'Dr. Amelia Richardson',
     authorTitle: 'DVM, Senior Veterinary Editor',
     defaultAuthorImg: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80',
-    authorProfileLink: 'author-dr-amelia.html' // NAYA: Author profile ka link
+    authorProfileLink: 'author-dr-amelia.html'
 };
 
 let allArticles = [];
 let currentPage = 1;
 let currentFilter = 'all'; 
+
+// pageKey yahan define kiya gaya hai
+const pageKey = window.location.pathname.split('/').pop() || 'index.html';
 
 const isArticlePage = window.location.pathname.includes(`/${config.folderName}/`);
 const basePath = isArticlePage ? '' : `${config.folderName}/`; 
@@ -57,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     initLiveSearchSystem(); 
     initTopBarFeatures(); 
 
-    // 🔴 SCROLL MEMORY RESTORE (Instantly goes back to exact position) 🔴
+    // 🔴 SCROLL MEMORY RESTORE
     setTimeout(() => {
         const savedScroll = sessionStorage.getItem('scroll_' + pageKey);
         if (savedScroll && !isArticlePage) {
@@ -65,7 +68,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }, 50);
     
-    // SEO Enhancement: Delay non-critical popup so main content renders faster
     setTimeout(initNotificationPopup, 4500);
 });
 
@@ -124,23 +126,19 @@ function updateInnerArticleDate() {
     }
 }
 
-// 🔴 INSTANT LOAD FIX ADDED HERE 🔴
 async function loadArticlesFast() {
     try {
-        // 1. Session Storage se fast load (0 wait time)
         const cachedData = sessionStorage.getItem('cached_techvibe_data');
         if (cachedData) {
             allArticles = JSON.parse(cachedData);
         }
 
-        // 2. Background mein network se naya data laana
         const response = await fetch(basePath + 'data.json?v=' + new Date().getTime());
         if (response.ok) {
             const freshArticles = await response.json();
             freshArticles.sort((a, b) => b.id - a.id); 
             
             allArticles = freshArticles;
-            // Cache update kar diya for next time
             sessionStorage.setItem('cached_techvibe_data', JSON.stringify(allArticles));
         }
     } catch (e) {
@@ -168,16 +166,16 @@ function renderArticles(container, filter) {
     const articlesHTML = paginatedItems.map(art => {
         let imgSrc = art.image.startsWith('http') ? art.image : `${linkPrefix}${art.image}`;
         
-        // 🔴 ONCLICK MEIN SCROLL POSITION SAVE KARNE KA CODE ADD KIYA HAI 🔴
+        // 🔴 FIX: ${pageKey} lagaya gaya hai taake click event correctly kaam kare.
         return `
             <article class="news-card">
-                <div class="article-image" onclick="sessionStorage.setItem('scroll_' + pageKey, window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">
+                <div class="article-image" onclick="sessionStorage.setItem('scroll_${pageKey}', window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">
                     <img src="${imgSrc}" alt="${art.title}" loading="lazy" decoding="async">
                 </div>
                 <div class="news-content">
                     <span class="article-category">${art.category}</span>
-                    <h3 class="news-title" onclick="sessionStorage.setItem('scroll_' + pageKey, window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">${art.title}</h3>
-                    <p class="news-excerpt">${art.excerpt || 'Click here to read the full pet care guide and detailed information...'}</p>
+                    <h3 class="news-title" onclick="sessionStorage.setItem('scroll_${pageKey}', window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">${art.title}</h3>
+                    <p class="news-excerpt" onclick="sessionStorage.setItem('scroll_${pageKey}', window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">${art.excerpt || 'Click here to read the full pet care guide...'}</p>
                     <div class="news-meta">
                         <a href="${rootPrefix}${config.authorProfileLink}" style="display:flex; align-items:center; gap:5px; text-decoration:none; color:inherit; transition: color 0.3s;" class="author-hover">
                             <img src="${art.authorImg}" class="card-author-img" alt="${art.author}" loading="lazy" decoding="async">
@@ -193,7 +191,6 @@ function renderArticles(container, filter) {
     container.innerHTML = articlesHTML;
     if (totalPages > 1) renderPaginationControls(container, totalPages);
 
-    // CSS injection for hover effect on the new link
     const authorHoverStyle = document.createElement('style');
     authorHoverStyle.innerHTML = `.author-hover:hover .author-link { color: #e1306c !important; }`;
     document.head.appendChild(authorHoverStyle);
@@ -443,7 +440,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let ticking = false;
     
-    // Performance Optimized Scroll Event (Passive Event Listener)
     window.addEventListener('scroll', () => {
         if (!ticking) {
             window.requestAnimationFrame(() => {
@@ -464,5 +460,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             ticking = true;
         }
-    }, { passive: true }); // SEO Performance: Tells browser not to block scrolling
+    }, { passive: true });
 });
