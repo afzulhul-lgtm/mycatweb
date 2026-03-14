@@ -574,3 +574,9 @@ a {
 [data-theme="dark"] ul, [data-theme="dark"] li, [data-theme="dark"] .legal-content, [data-theme="dark"] .legal-content ul, [data-theme="dark"] .legal-content li, [data-theme="dark"] .contact-info-box p, [data-theme="dark"] .contact-info-box h3, [data-theme="dark"] .toc-box li, [data-theme="dark"] .toc-box a { color: #bbb !important; }
 [data-theme="dark"] .legal-content a { color: #e1306c !important; }
 [data-theme="dark"] .toc-box a:hover { color: #fff !important; }
+/* Author Profile Dark Mode Fix */
+[data-theme="dark"] .author-profile {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
