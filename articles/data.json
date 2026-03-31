@@ -386,7 +386,7 @@
     },
     {
         "id": 36,
-        "title": "Dog-Loving Couple Hails Dermatologist as \u2018the Epitome of NC State\u2019",
+        "title": "Dog-Loving Couple Hails Dermatologist as ‘the Epitome of NC State’",
         "date": "17 Mar, 2026",
         "author": "Dr. Amelia Richardson",
         "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
@@ -397,7 +397,7 @@
     },
     {
         "id": 37,
-        "title": "After a Grape Ingestion, Going the Extra Miles for Daddy\u2019s Dog",
+        "title": "After a Grape Ingestion, Going the Extra Miles for Daddy’s Dog",
         "date": "17 Mar, 2026",
         "author": "Dr. Amelia Richardson",
         "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
@@ -408,7 +408,7 @@
     },
     {
         "id": 38,
-        "title": "A court just ruled Meta and YouTube 'negligent' \u2014 social media may never be the same",
+        "title": "A court just ruled Meta and YouTube 'negligent' — social media may never be the same",
         "date": "27 Mar, 2026",
         "author": "Dr. Amelia Richardson",
         "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
@@ -416,5 +416,16 @@
         "image": "image38.webp",
         "filename": "a-court-just-ruled-meta-and-youtube-negligent-social-media-may-never-b-38.html",
         "excerpt": "Social media's impact on pet owners' mental health and how to protect your furry friends from its negative effects."
+    },
+    {
+        "id": 39,
+        "title": "How to Train a German Shepherd Puppy at Home",
+        "date": "31 Mar, 2026",
+        "author": "Dr. Amelia Richardson",
+        "authorImg": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Dogs",
+        "image": "german-shepherd-training.webp",
+        "filename": "how-to-train-a-german-shepherd-puppy-at-home-39.html",
+        "excerpt": "Train your german shepherd puppy at home with ease and effectiveness."
     }
 ]
