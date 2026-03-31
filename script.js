@@ -121,8 +121,12 @@ function getTodayDate() {
 
 function updateInnerArticleDate() {
     if (isArticlePage) {
-        const dateElement = document.querySelector('.publish-date .date');
-        if (dateElement) dateElement.innerText = getTodayDate();
+        // Updated selector to match template.html and replace both Published and Updated dates
+        const publishSpans = document.querySelectorAll('.publish-date span');
+        if (publishSpans && publishSpans.length >= 2) {
+            publishSpans[0].innerHTML = `<i class="far fa-calendar-alt"></i> Published: ${getTodayDate()}`;
+            publishSpans[1].innerHTML = `<i class="fas fa-sync-alt"></i> Updated: ${getTodayDate()}`;
+        }
     }
 }
 
@@ -167,6 +171,7 @@ function renderArticles(container, filter) {
         let imgSrc = art.image.startsWith('http') ? art.image : `${linkPrefix}${art.image}`;
         
         // 🔴 FIX: ${pageKey} lagaya gaya hai taake click event correctly kaam kare.
+        // 🔴 FIX: ${art.date} ko hata kar ${getTodayDate()} lagaya gaya hai taake latest date show ho.
         return `
             <article class="news-card">
                 <div class="article-image" onclick="sessionStorage.setItem('scroll_${pageKey}', window.scrollY); window.location.href='${linkPrefix}${art.filename}'" style="cursor:pointer">
@@ -182,7 +187,7 @@ function renderArticles(container, filter) {
                             <span class="author-link">${art.author} <i class="fas fa-check-circle verified-tick" aria-hidden="true"></i></span>
                         </a>
                         <span class="separator">|</span>
-                        <span class="date">${art.date}</span>
+                        <span class="date">${getTodayDate()}</span>
                     </div>
                 </div>
             </article>`;
@@ -262,12 +267,13 @@ function initLiveSearchSystem() {
 
         resultsList.innerHTML = filtered.map(art => {
             let imgSrc = art.image.startsWith('http') ? art.image : `${linkPrefix}${art.image}`;
+            // 🔴 FIX: ${art.date} ko hata kar ${getTodayDate()} lagaya gaya hai
             return `
             <div class="search-result-item" onclick="window.location.href='${linkPrefix}${art.filename}'">
                 <img src="${imgSrc}" loading="lazy" alt="Thumbnail">
                 <div class="search-result-info">
                     <h4>${art.title}</h4>
-                    <p>${art.category} • ${art.date}</p>
+                    <p>${art.category} • ${getTodayDate()}</p>
                 </div>
             </div>`
         }).join('');
@@ -283,12 +289,13 @@ function updateSidebar(sidebar) {
     
     sidebar.innerHTML = recent.map(art => {
         let imgSrc = art.image.startsWith('http') ? art.image : `${linkPrefix}${art.image}`;
+        // 🔴 FIX: ${art.date} ko hata kar ${getTodayDate()} lagaya gaya hai
         return `
         <div class="sidebar-card">
             <div class="sidebar-img"><img src="${imgSrc}" loading="lazy" alt="Thumbnail"></div>
             <div class="sidebar-info">
                 <a href="${linkPrefix}${art.filename}">${art.title}</a>
-                <span class="sidebar-date"><i class="far fa-clock" aria-hidden="true"></i> ${art.date}</span>
+                <span class="sidebar-date"><i class="far fa-clock" aria-hidden="true"></i> ${getTodayDate()}</span>
             </div>
         </div>`
     }).join('');
