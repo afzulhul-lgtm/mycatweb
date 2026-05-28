@@ -1,448 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2007612527496766" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐾 PetPedia Hub — Latest Articles</title>
-    <meta name="description" content="Latest pet care articles, vet-approved guides, and dog food recall alerts from PetPedia Hub.">
+    <title>🐾 PetPedia Hub - Latest Pet Care Articles, Vet-Approved Guides & Dog Food Recall Alerts</title>
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="PetPedia Hub brings you vet-approved pet care guides, dog food recall alerts, training tips, and expert advice for dogs and cats. Your trusted source for pet health.">
     <link rel="canonical" href="https://petpediahub.online/" />
-    <meta property="og:title" content="🐾 PetPedia Hub — Latest Articles">
-    <meta property="og:description" content="Latest pet care articles, vet-approved guides, and dog food recall alerts.">
-    <meta property="og:url" content="https://petpediahub.online/">
+
     <meta property="og:type" content="website">
+    <meta property="og:title" content="🐾 PetPedia Hub - Vet-Approved Pet Care & News">
+    <meta property="og:description" content="Latest pet care articles, vet-approved guides, and dog food recall alerts from PetPedia Hub.">
+    <meta property="og:url" content="https://petpediahub.online/">
+    <meta property="og:site_name" content="PetPedia Hub">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEDT0D5XS0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JEDT0D5XS0');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PetPedia Hub",
+      "url": "https://petpediahub.online/",
+      "description": "Vet-approved pet care guides, dog food recall alerts and expert advice for dogs and cats",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://petpediahub.online/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #fafafa; color: #333; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #e1306c, #c0143c); color: #fff; padding: 40px 0; text-align: center; margin-bottom: 40px; }
-        header h1 { font-size: 2.5rem; font-weight: 700; }
-        header p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
-        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px; }
-        .article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
-        .article-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        .article-card img { width: 100%; height: 200px; object-fit: cover; }
-        .article-card-body { padding: 20px; }
-        .article-card .category { display: inline-block; background: #fff0f3; color: #e1306c; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 10px; }
-        .article-card h2 { font-size: 1.15rem; line-height: 1.4; margin-bottom: 10px; }
-        .article-card h2 a { color: #222; text-decoration: none; }
-        .article-card h2 a:hover { color: #e1306c; }
-        .article-card .description { font-size: 0.88rem; color: #666; line-height: 1.5; margin-bottom: 12px; }
-        .article-card .date { font-size: 0.78rem; color: #999; }
-        .footer { text-align: center; padding: 40px 0; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 40px; }
-        @media (max-width: 768px) { .articles-grid { grid-template-columns: 1fr; } header h1 { font-size: 1.8rem; } }
+        /* Static SEO article list - visible to Googlebot, hidden visually once JS loads */
+        #seo-article-list { padding: 10px 0; }
+        #seo-article-list h2 { font-size: 1.3rem; margin-bottom: 16px; color: #111; }
+        #seo-article-list ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        #seo-article-list li a { display: block; text-decoration: none; color: #111; background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+        #seo-article-list li a img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        #seo-article-list li a div { padding: 12px; }
+        #seo-article-list li a h3 { font-size: 0.95rem; margin: 0 0 6px; line-height: 1.4; color: #111; }
+        #seo-article-list li a p { font-size: 0.82rem; color: #666; margin: 0; }
+        #seo-article-list.hidden { display: none; }
     </style>
-
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
 </head>
 <body>
-    <header>
+    <script>if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="reading-progress"></div>
+    </div>
+
+    <div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-paw"></i> PET NEWS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header" style="margin-bottom: 0;">
         <div class="container">
-            <h1>🐾 PetPedia Hub</h1>
-            <p>Vet-approved pet care guides, dog food recall alerts & expert advice</p>
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" style="text-decoration: none; color: inherit;"><h1>🐾 PetPedia Hub</h1></a>
+                </div>
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul>
+                       <li><a href="index.html">Home</a></li>
+                        <li><a href="dogs.html" class="active" aria-current="page">Dogs</a></li>
+                        <li><a href="cats.html">Cats</a></li>
+                        <li><a href="dog-breeds.html">Dog Breeds</a></li>
+                        <li><a href="cat-breeds.html">Cat Breeds</a></li>
+                         <li><a href="calculators.html">Calculator</a></li>
+                        <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
-    <main class="container">
-        <div class="articles-grid">
 
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/german-shepherd-training.webp" alt="How to Train a German Shepherd Puppy at Home" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-to-train-a-german-shepherd-puppy-at-home-39.html">How to Train a German Shepherd Puppy at Home</a></h2>
-                    <p class="description">Train your german shepherd puppy at home with ease and effectiveness....</p>
-                    <span class="date">📅 2026-03-31</span>
+    <div class="utility-bar">
+        <div class="container utility-bar-inner">
+            <div class="utility-left">
+                <span id="current-date-display" class="date-display"></span>
+            </div>
+            <div class="utility-right">
+                <div class="top-actions">
+                    <button id="random-article-btn" title="Read Random Article"><i class="fas fa-random"></i> Random</button>
+                    <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
                 </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image38.webp" alt="A court just ruled Meta and YouTube 'negligent' — social media may never be the same" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Latest News</span>
-                    <h2><a href="https://petpediahub.online/articles/a-court-just-ruled-meta-and-youtube-negligent-social-media-may-never-b-38.html">A court just ruled Meta and YouTube 'negligent' — social media may never be the same</a></h2>
-                    <p class="description">Social media's impact on pet owners' mental health and how to protect your furry friends from its negative effects....</p>
-                    <span class="date">📅 2026-03-27</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image37.webp" alt="After a Grape Ingestion, Going the Extra Miles for Daddy’s Dog" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dog</span>
-                    <h2><a href="https://petpediahub.online/articles/after-a-grape-ingestion-going-the-extra-miles-for-daddys-dog-37.html">After a Grape Ingestion, Going the Extra Miles for Daddy’s Dog</a></h2>
-                    <p class="description">Expert pet care for dogs: Learn how to save your dog from grape poisoning and kidney failure with our comprehensive guide....</p>
-                    <span class="date">📅 2026-03-17</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image36.webp" alt="Dog-Loving Couple Hails Dermatologist as ‘the Epitome of NC State’" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dog</span>
-                    <h2><a href="https://petpediahub.online/articles/dog-loving-couple-hails-dermatologist-as-the-epitome-of-nc-state-36.html">Dog-Loving Couple Hails Dermatologist as ‘the Epitome of NC State’</a></h2>
-                    <p class="description">Get expert pet care advice on dog skin allergies, anxious dog care, and innovative treatments from Dr. Amelia Richardson, a renowned veterinarian....</p>
-                    <span class="date">📅 2026-03-17</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image34.webp" alt="Do I Need a Mentor to Breed Cats? What New Breeders Really Need Instead" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cat Breeds</span>
-                    <h2><a href="https://petpediahub.online/articles/do-i-need-a-mentor-to-breed-cats-what-new-breeders-really-need-instead-34.html">Do I Need a Mentor to Breed Cats? What New Breeders Really Need Instead</a></h2>
-                    <p class="description">Discover expert cat breeding advice and guidance for new breeders, learn how to start breeding cats responsibly and avoid common mistakes....</p>
-                    <span class="date">📅 2026-03-14</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image35.webp" alt="Social Media for Cat Breeders: How to Promote Your Cattery and Kittens With Confidence" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cat Breeds</span>
-                    <h2><a href="https://petpediahub.online/articles/social-media-for-cat-breeders-how-to-promote-your-cattery-and-kittens-35.html">Social Media for Cat Breeders: How to Promote Your Cattery and Kittens With Confidence</a></h2>
-                    <p class="description">Promote your cattery and kittens with confidence using social media for cat breeders, expert tips and advice....</p>
-                    <span class="date">📅 2026-03-14</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image27.webp" alt="8 Ways Dogs Influence Their Owners" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/8-ways-dogs-influence-their-owners-27.html">8 Ways Dogs Influence Their Owners</a></h2>
-                    <p class="description">Dogs influence owners in many ways, from exercise to mental health, and social life. Discover how dogs change your life....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image33.webp" alt="How Dental Health is Key to a Long Life for Your Pet" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-dental-health-is-key-to-a-long-life-for-your-pet-33.html">How Dental Health is Key to a Long Life for Your Pet</a></h2>
-                    <p class="description">Improving dog dental health for a longer, happier life: expert tips and advice....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image25.webp" alt="How Dogs Improve the Mental Health of Those in Rural Areas" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-dogs-improve-the-mental-health-of-those-in-rural-areas-25.html">How Dogs Improve the Mental Health of Those in Rural Areas</a></h2>
-                    <p class="description">Dogs improve mental health in rural areas, reducing loneliness and depression with unconditional love and companionship, explore the benefits and expe...</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image29.webp" alt="How Service Dogs Can Help Kids with Autism and ADHD" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-service-dogs-can-help-kids-with-autism-and-adhd-29.html">How Service Dogs Can Help Kids with Autism and ADHD</a></h2>
-                    <p class="description">Service dogs for autism & ADHD: Discover how they can help kids with special needs, providing emotional support, safety, and social interaction benefi...</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image31.webp" alt="How to Calm Your Dog in Stressful Situations" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-to-calm-your-dog-in-stressful-situations-31.html">How to Calm Your Dog in Stressful Situations</a></h2>
-                    <p class="description">Calming anxious dogs: expert tips and advice from a veterinarian on stress relief, calming signals, and natural calmers for a happier pet....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image32.webp" alt="Illnesses You Can Get from Dogs & How to Prevent Them" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/illnesses-you-can-get-from-dogs-how-to-prevent-them-32.html">Illnesses You Can Get from Dogs & How to Prevent Them</a></h2>
-                    <p class="description">Protect your family from zoonotic diseases with our expert guide on illnesses transmitted from dogs and prevention tips....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image30.webp" alt="Most Famous K9 Cops of All Time" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/most-famous-k9-cops-of-all-time-30.html">Most Famous K9 Cops of All Time</a></h2>
-                    <p class="description">Discover the most famous K9 cops in history, their bravery, and heroic stories, and learn how to care for your own canine companion....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image24.webp" alt="Puppy Barking: Why it Happens and How To Help Your Puppy Settle" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/puppy-barking-why-it-happens-and-how-to-help-your-puppy-settle-24.html">Puppy Barking: Why it Happens and How To Help Your Puppy Settle</a></h2>
-                    <p class="description">Puppy barking solutions: Learn why puppies bark and how to stop excessive barking with our expert veterinary advice and pet care tips....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image26.webp" alt="Rainy Day Dog-Walking Essentials" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/rainy-day-dog-walking-essentials-26.html">Rainy Day Dog-Walking Essentials</a></h2>
-                    <p class="description">Rainy day dog-walking essentials: Gear up for safe and dry walks with our expert guide....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image28.webp" alt="Tips to Stop Unwanted Dog Jumping" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/tips-to-stop-unwanted-dog-jumping-28.html">Tips to Stop Unwanted Dog Jumping</a></h2>
-                    <p class="description">Stop unwanted dog jumping with our expert vet advice and training tips to ensure a calm and safe environment for you and your pet....</p>
-                    <span class="date">📅 2026-03-10</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image19.webp" alt="10 Signs Your Cat Is Obsessed With You" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/10-signs-your-cat-is-obsessed-with-you-19.html">10 Signs Your Cat Is Obsessed With You</a></h2>
-                    <p class="description">Discover the top signs your cat is obsessed with you and learn how to nurture a deeper bond with your feline friend....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image15.webp" alt="11 Stunning Black Cat Breeds That Deserve a Place in Your Heart" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cat Breeds</span>
-                    <h2><a href="https://petpediahub.online/articles/11-stunning-black-cat-breeds-that-deserve-a-place-in-your-heart-15.html">11 Stunning Black Cat Breeds That Deserve a Place in Your Heart</a></h2>
-                    <p class="description">Discover 11 stunning black cat breeds & learn expert pet care tips to keep your feline friend happy & healthy....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image20.webp" alt="6 Tips for Maximizing Pet Insurance Benefits for Your Cat" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/6-tips-for-maximizing-pet-insurance-benefits-for-your-cat-20.html">6 Tips for Maximizing Pet Insurance Benefits for Your Cat</a></h2>
-                    <p class="description">Maximize your cat's health with our expert guide to pet insurance, covering benefits, claims, and affordable plans....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image21.webp" alt="7 Subtle Ways You Might Be Offending Your Cat" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/7-subtle-ways-you-might-be-offending-your-cat-21.html">7 Subtle Ways You Might Be Offending Your Cat</a></h2>
-                    <p class="description">As a responsible pet owner, learn the subtle ways you might be offending your cat and how to improve your relationship with them....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image16.webp" alt="9 Gorgeous Grey Cat Breeds (With Pictures)" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cat Breeds</span>
-                    <h2><a href="https://petpediahub.online/articles/9-gorgeous-grey-cat-breeds-with-pictures-16.html">9 Gorgeous Grey Cat Breeds (With Pictures)</a></h2>
-                    <p class="description">Discover the beauty of grey cat breeds with our comprehensive guide, featuring 9 stunning breeds, care tips, and expert advice for a happy, healthy pe...</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image18.webp" alt="How To Deal With Food Aggression in Cats" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/how-to-deal-with-food-aggression-in-cats-18.html">How To Deal With Food Aggression in Cats</a></h2>
-                    <p class="description">Dealing with food aggression in cats: expert veterinary advice and solutions....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image22.webp" alt="Research Proves Owning a Cat Is Good for Your Heart" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/research-proves-owning-a-cat-is-good-for-your-heart-22.html">Research Proves Owning a Cat Is Good for Your Heart</a></h2>
-                    <p class="description">Research proves owning a cat is good for your heart, reducing stress and anxiety while promoting emotional wellbeing....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image14.webp" alt="Top Tips for Keeping Indoor Cats Safe Outside" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/top-tips-for-keeping-indoor-cats-safe-outside-14.html">Top Tips for Keeping Indoor Cats Safe Outside</a></h2>
-                    <p class="description">Keep your indoor cat safe outside with our expert tips and advice on outdoor safety, health risks, and more....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image17.webp" alt="What Is Catnip? Why Cats Like It" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/what-is-catnip-why-cats-like-it-17.html">What Is Catnip? Why Cats Like It</a></h2>
-                    <p class="description">Discover the wonders of catnip and its effects on your feline friend's behavior and health....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image23.webp" alt="Why Does My Cat Attack My Feet?" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Cats</span>
-                    <h2><a href="https://petpediahub.online/articles/why-does-my-cat-attack-my-feet-23.html">Why Does My Cat Attack My Feet?</a></h2>
-                    <p class="description">Why does my cat attack my feet? Learn expert tips to stop cat aggression and understand cat behavior....</p>
-                    <span class="date">📅 2026-03-06</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image4.webp" alt="11 Tips to Pet-Proof Your Christmas Tree" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/11-tips-to-pet-proof-your-christmas-tree-4.html">11 Tips to Pet-Proof Your Christmas Tree</a></h2>
-                    <p class="description">Protect your pets from Christmas tree hazards with our expert veterinary advice and pet care tips....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image13.webp" alt="20 Most Popular Dog Breeds" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dog Breeds</span>
-                    <h2><a href="https://petpediahub.online/articles/20-most-popular-dog-breeds-13.html">20 Most Popular Dog Breeds</a></h2>
-                    <p class="description">Discover the top 20 most popular dog breeds and get expert advice on their care, health, and behavior....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image11.webp" alt="6 Ways To Give Your Dog More Mental Stimulation" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/6-ways-to-give-your-dog-more-mental-stimulation-11.html">6 Ways To Give Your Dog More Mental Stimulation</a></h2>
-                    <p class="description">Provide mental stimulation for dogs to prevent boredom and stress, promoting a happy and healthy pet with our expert tips and advice....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image12.webp" alt="8 Ways To Socialize Your New Puppy" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/8-ways-to-socialize-your-new-puppy-12.html">8 Ways To Socialize Your New Puppy</a></h2>
-                    <p class="description">Puppy socialization tips: expert advice on training and dog behavior for a healthy pet....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image3.webp" alt="9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/9-dog-treat-recipes-perfect-for-thanksgiving-3.html">9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)</a></h2>
-                    <p class="description">9 easy, vet-approved Thanksgiving dog treat recipes using pumpkin, turkey, sweet potato and more. Full ingredients, instructions, and a complete list ...</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image7.webp" alt="Becoming A Senior Dog: Top 12 Signs Your Pooch Is Aging" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/becoming-a-senior-dog-top-12-signs-your-pooch-is-aging-7.html">Becoming A Senior Dog: Top 12 Signs Your Pooch Is Aging</a></h2>
-                    <p class="description">As your dog ages, learn the top 12 signs of seniority and expert care tips for a happy, healthy life....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image8.webp" alt="Buckle Up, Pup! Road Trip Safety &amp; Essentials for Your Dog" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/buckle-up-pup-road-trip-safety-amp-essentials-for-your-dog-8.html">Buckle Up, Pup! Road Trip Safety &amp; Essentials for Your Dog</a></h2>
-                    <p class="description">Buckle up with pet travel tips and dog road trip safety essentials for a fun, stress-free vacation with your furry friend....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image5.webp" alt="Can Dogs Eat Chocolate? What You NEED to Know!" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/can-dogs-eat-chocolate-what-you-need-to-know-5.html">Can Dogs Eat Chocolate? What You NEED to Know!</a></h2>
-                    <p class="description">Protect your furry friend from chocolate toxicity, learn what foods are safe and toxic for dogs, and get expert pet care advice from Dr. Amelia Richar...</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image10.webp" alt="Cloudy Eyes in Dogs: What It Means and When to Worry" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/cloudy-eyes-in-dogs-what-it-means-and-when-to-worry-10.html">Cloudy Eyes in Dogs: What It Means and When to Worry</a></h2>
-                    <p class="description">Cloudy eyes in dogs: Learn about dog eye problems, canine cataracts, and nuclear sclerosis. Know when to see a vet for your dog's eye health....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image6.webp" alt="Dog Burn Warning: Always Test Garden Hose Water Before Playtime" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/dog-burn-warning-always-test-garden-hose-water-before-playtime-6.html">Dog Burn Warning: Always Test Garden Hose Water Before Playtime</a></h2>
-                    <p class="description">Protect your dog from burns with our expert garden hose safety tips, ensuring a fun and safe summer playtime for your furry friend....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image1.webp" alt="Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/dog-food-recalled-due-to-potential-plastic-contamination-1.html">Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners</a></h2>
-                    <p class="description">Fromm Family Foods recalled dog food for plastic contamination in 2025-2026. Learn the warning signs, what to do if your dog ate plastic, and how to c...</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image9.webp" alt="How Much Exercise Does Your Dog Need?" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/how-much-exercise-does-your-dog-need-9.html">How Much Exercise Does Your Dog Need?</a></h2>
-                    <p class="description">Exercise needs for dogs vary by breed, age, and size. Learn how to determine the perfect daily exercise routine for your furry friend....</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <img src="https://petpediahub.online/articles/image2.webp" alt="The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026 (US &amp; UK)" loading="lazy">
-                <div class="article-card-body">
-                    <span class="category">Dogs</span>
-                    <h2><a href="https://petpediahub.online/articles/the-ultimate-gift-guide-for-dog-lovers-amp-dogs-2.html">The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026 (US &amp; UK)</a></h2>
-                    <p class="description">Discover the best gifts for dog lovers and dogs in 2026 — from personalised keepsakes and interactive puzzle toys to GPS trackers and luxury beds. Sor...</p>
-                    <span class="date">📅 2026-03-02</span>
-                </div>
-            </article>
-
+            </div>
         </div>
+    </div>
+
+    <section class="page-title">
+        <div class="container">
+            <h2>🐶 Vet-Approved Pet Care Guides & News</h2>
+        </div>
+    </section>
+
+    <main class="container main-content">
+
+        <!--
+        ============================================================
+        SEO STATIC ARTICLE LIST
+        This section is read by Google even without JavaScript.
+        It is replaced visually by the JS card layout below.
+        DO NOT DELETE this section.
+        
+        HOW TO UPDATE: Run generate_index.py after adding new articles.
+        It will replace the placeholder below with real article links.
+        ============================================================
+        -->
+        <div id="seo-article-list">
+            <h2>Latest Pet Care Articles &amp; Guides</h2>
+            <ul id="seo-articles-ul">
+                <!-- ARTICLES_PLACEHOLDER -->
+                <li>
+                    <a href="https://petpediahub.online/articles/dog-food-recalled-due-to-potential-plastic-contamination-1.html">
+                        <img src="articles/image1.webp" alt="Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners</h3>
+                            <p>Fromm Family Foods recalled dog food for plastic contamination. Learn the warning signs, what to do &mdash; <small>March 02, 2026</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/the-ultimate-gift-guide-for-dog-lovers-amp-dogs-2.html">
+                        <img src="articles/image2.webp" alt="The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026 (US &amp; UK)</h3>
+                            <p>Discover the best gifts for dog lovers and dogs in 2026 — from personalised keepsakes &mdash; <small>March 02, 2026</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/9-dog-treat-recipes-perfect-for-thanksgiving-3.html">
+                        <img src="articles/image3.webp" alt="9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)</h3>
+                            <p>9 easy, vet-approved Thanksgiving dog treat recipes using pumpkin, turkey, sweet potato &mdash; <small>March 02, 2026</small></p>
+                        </div>
+                    </a>
+                </li>
+                <!-- generate_index.py fills this automatically -->
+                <li>
+                    <a href="https://petpediahub.online/articles/how-to-train-a-german-shepherd-puppy-at-home-39.html">
+                        <img src="https://petpediahub.online/articles/german-shepherd-training.webp" alt="How to Train a German Shepherd Puppy at Home" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How to Train a German Shepherd Puppy at Home</h3>
+                            <p>Train your german shepherd puppy at home with ease and effectiveness. &mdash; <small>2026-03-31T22:26:04.776814</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/a-court-just-ruled-meta-and-youtube-negligent-social-media-may-never-b-38.html">
+                        <img src="https://petpediahub.online/articles/image38.webp" alt="A court just ruled Meta and YouTube 'negligent' — social media may never be the same" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>A court just ruled Meta and YouTube 'negligent' — social media may never be the same</h3>
+                            <p>Social media's impact on pet owners' mental health and how to protect your furry friends from its negative effects. &mdash; <small>2026-03-27T04:57:08.909708</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/after-a-grape-ingestion-going-the-extra-miles-for-daddys-dog-37.html">
+                        <img src="https://petpediahub.online/articles/image37.webp" alt="After a Grape Ingestion, Going the Extra Miles for Daddy’s Dog" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>After a Grape Ingestion, Going the Extra Miles for Daddy’s Dog</h3>
+                            <p>Expert pet care for dogs: Learn how to save your dog from grape poisoning and kidney failure with our comprehensive guid... &mdash; <small>2026-03-17T22:31:44.674661</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/dog-loving-couple-hails-dermatologist-as-the-epitome-of-nc-state-36.html">
+                        <img src="https://petpediahub.online/articles/image36.webp" alt="Dog-Loving Couple Hails Dermatologist as ‘the Epitome of NC State’" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Dog-Loving Couple Hails Dermatologist as ‘the Epitome of NC State’</h3>
+                            <p>Get expert pet care advice on dog skin allergies, anxious dog care, and innovative treatments from Dr. Amelia Richardson... &mdash; <small>2026-03-17T22:31:44.674661</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/do-i-need-a-mentor-to-breed-cats-what-new-breeders-really-need-instead-34.html">
+                        <img src="https://petpediahub.online/articles/image34.webp" alt="Do I Need a Mentor to Breed Cats? What New Breeders Really Need Instead" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Do I Need a Mentor to Breed Cats? What New Breeders Really Need Instead</h3>
+                            <p>Discover expert cat breeding advice and guidance for new breeders, learn how to start breeding cats responsibly and avoi... &mdash; <small>2026-03-14T19:46:41.378928</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/social-media-for-cat-breeders-how-to-promote-your-cattery-and-kittens-35.html">
+                        <img src="https://petpediahub.online/articles/image35.webp" alt="Social Media for Cat Breeders: How to Promote Your Cattery and Kittens With Confidence" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Social Media for Cat Breeders: How to Promote Your Cattery and Kittens With Confidence</h3>
+                            <p>Promote your cattery and kittens with confidence using social media for cat breeders, expert tips and advice. &mdash; <small>2026-03-14T19:46:41.378928</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/8-ways-dogs-influence-their-owners-27.html">
+                        <img src="https://petpediahub.online/articles/image27.webp" alt="8 Ways Dogs Influence Their Owners" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>8 Ways Dogs Influence Their Owners</h3>
+                            <p>Dogs influence owners in many ways, from exercise to mental health, and social life. Discover how dogs change your life. &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-dental-health-is-key-to-a-long-life-for-your-pet-33.html">
+                        <img src="https://petpediahub.online/articles/image33.webp" alt="How Dental Health is Key to a Long Life for Your Pet" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How Dental Health is Key to a Long Life for Your Pet</h3>
+                            <p>Improving dog dental health for a longer, happier life: expert tips and advice. &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-dogs-improve-the-mental-health-of-those-in-rural-areas-25.html">
+                        <img src="https://petpediahub.online/articles/image25.webp" alt="How Dogs Improve the Mental Health of Those in Rural Areas" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How Dogs Improve the Mental Health of Those in Rural Areas</h3>
+                            <p>Dogs improve mental health in rural areas, reducing loneliness and depression with unconditional love and companionship,... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-service-dogs-can-help-kids-with-autism-and-adhd-29.html">
+                        <img src="https://petpediahub.online/articles/image29.webp" alt="How Service Dogs Can Help Kids with Autism and ADHD" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How Service Dogs Can Help Kids with Autism and ADHD</h3>
+                            <p>Service dogs for autism & ADHD: Discover how they can help kids with special needs, providing emotional support, safety,... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-to-calm-your-dog-in-stressful-situations-31.html">
+                        <img src="https://petpediahub.online/articles/image31.webp" alt="How to Calm Your Dog in Stressful Situations" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How to Calm Your Dog in Stressful Situations</h3>
+                            <p>Calming anxious dogs: expert tips and advice from a veterinarian on stress relief, calming signals, and natural calmers ... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/illnesses-you-can-get-from-dogs-how-to-prevent-them-32.html">
+                        <img src="https://petpediahub.online/articles/image32.webp" alt="Illnesses You Can Get from Dogs & How to Prevent Them" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Illnesses You Can Get from Dogs & How to Prevent Them</h3>
+                            <p>Protect your family from zoonotic diseases with our expert guide on illnesses transmitted from dogs and prevention tips. &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/most-famous-k9-cops-of-all-time-30.html">
+                        <img src="https://petpediahub.online/articles/image30.webp" alt="Most Famous K9 Cops of All Time" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Most Famous K9 Cops of All Time</h3>
+                            <p>Discover the most famous K9 cops in history, their bravery, and heroic stories, and learn how to care for your own canin... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/puppy-barking-why-it-happens-and-how-to-help-your-puppy-settle-24.html">
+                        <img src="https://petpediahub.online/articles/image24.webp" alt="Puppy Barking: Why it Happens and How To Help Your Puppy Settle" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Puppy Barking: Why it Happens and How To Help Your Puppy Settle</h3>
+                            <p>Puppy barking solutions: Learn why puppies bark and how to stop excessive barking with our expert veterinary advice and ... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/rainy-day-dog-walking-essentials-26.html">
+                        <img src="https://petpediahub.online/articles/image26.webp" alt="Rainy Day Dog-Walking Essentials" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Rainy Day Dog-Walking Essentials</h3>
+                            <p>Rainy day dog-walking essentials: Gear up for safe and dry walks with our expert guide. &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/tips-to-stop-unwanted-dog-jumping-28.html">
+                        <img src="https://petpediahub.online/articles/image28.webp" alt="Tips to Stop Unwanted Dog Jumping" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Tips to Stop Unwanted Dog Jumping</h3>
+                            <p>Stop unwanted dog jumping with our expert vet advice and training tips to ensure a calm and safe environment for you and... &mdash; <small>2026-03-10T05:47:57.719340</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/10-signs-your-cat-is-obsessed-with-you-19.html">
+                        <img src="https://petpediahub.online/articles/image19.webp" alt="10 Signs Your Cat Is Obsessed With You" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>10 Signs Your Cat Is Obsessed With You</h3>
+                            <p>Discover the top signs your cat is obsessed with you and learn how to nurture a deeper bond with your feline friend. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/11-stunning-black-cat-breeds-that-deserve-a-place-in-your-heart-15.html">
+                        <img src="https://petpediahub.online/articles/image15.webp" alt="11 Stunning Black Cat Breeds That Deserve a Place in Your Heart" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>11 Stunning Black Cat Breeds That Deserve a Place in Your Heart</h3>
+                            <p>Discover 11 stunning black cat breeds & learn expert pet care tips to keep your feline friend happy & healthy. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/6-tips-for-maximizing-pet-insurance-benefits-for-your-cat-20.html">
+                        <img src="https://petpediahub.online/articles/image20.webp" alt="6 Tips for Maximizing Pet Insurance Benefits for Your Cat" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>6 Tips for Maximizing Pet Insurance Benefits for Your Cat</h3>
+                            <p>Maximize your cat's health with our expert guide to pet insurance, covering benefits, claims, and affordable plans. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/7-subtle-ways-you-might-be-offending-your-cat-21.html">
+                        <img src="https://petpediahub.online/articles/image21.webp" alt="7 Subtle Ways You Might Be Offending Your Cat" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>7 Subtle Ways You Might Be Offending Your Cat</h3>
+                            <p>As a responsible pet owner, learn the subtle ways you might be offending your cat and how to improve your relationship w... &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/9-gorgeous-grey-cat-breeds-with-pictures-16.html">
+                        <img src="https://petpediahub.online/articles/image16.webp" alt="9 Gorgeous Grey Cat Breeds (With Pictures)" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>9 Gorgeous Grey Cat Breeds (With Pictures)</h3>
+                            <p>Discover the beauty of grey cat breeds with our comprehensive guide, featuring 9 stunning breeds, care tips, and expert ... &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-to-deal-with-food-aggression-in-cats-18.html">
+                        <img src="https://petpediahub.online/articles/image18.webp" alt="How To Deal With Food Aggression in Cats" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How To Deal With Food Aggression in Cats</h3>
+                            <p>Dealing with food aggression in cats: expert veterinary advice and solutions. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/research-proves-owning-a-cat-is-good-for-your-heart-22.html">
+                        <img src="https://petpediahub.online/articles/image22.webp" alt="Research Proves Owning a Cat Is Good for Your Heart" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Research Proves Owning a Cat Is Good for Your Heart</h3>
+                            <p>Research proves owning a cat is good for your heart, reducing stress and anxiety while promoting emotional wellbeing. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/top-tips-for-keeping-indoor-cats-safe-outside-14.html">
+                        <img src="https://petpediahub.online/articles/image14.webp" alt="Top Tips for Keeping Indoor Cats Safe Outside" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Top Tips for Keeping Indoor Cats Safe Outside</h3>
+                            <p>Keep your indoor cat safe outside with our expert tips and advice on outdoor safety, health risks, and more. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/what-is-catnip-why-cats-like-it-17.html">
+                        <img src="https://petpediahub.online/articles/image17.webp" alt="What Is Catnip? Why Cats Like It" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>What Is Catnip? Why Cats Like It</h3>
+                            <p>Discover the wonders of catnip and its effects on your feline friend's behavior and health. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/why-does-my-cat-attack-my-feet-23.html">
+                        <img src="https://petpediahub.online/articles/image23.webp" alt="Why Does My Cat Attack My Feet?" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Why Does My Cat Attack My Feet?</h3>
+                            <p>Why does my cat attack my feet? Learn expert tips to stop cat aggression and understand cat behavior. &mdash; <small>2026-03-06T00:42:25.095404</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/11-tips-to-pet-proof-your-christmas-tree-4.html">
+                        <img src="https://petpediahub.online/articles/image4.webp" alt="11 Tips to Pet-Proof Your Christmas Tree" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>11 Tips to Pet-Proof Your Christmas Tree</h3>
+                            <p>Protect your pets from Christmas tree hazards with our expert veterinary advice and pet care tips. &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/20-most-popular-dog-breeds-13.html">
+                        <img src="https://petpediahub.online/articles/image13.webp" alt="20 Most Popular Dog Breeds" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>20 Most Popular Dog Breeds</h3>
+                            <p>Discover the top 20 most popular dog breeds and get expert advice on their care, health, and behavior. &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/6-ways-to-give-your-dog-more-mental-stimulation-11.html">
+                        <img src="https://petpediahub.online/articles/image11.webp" alt="6 Ways To Give Your Dog More Mental Stimulation" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>6 Ways To Give Your Dog More Mental Stimulation</h3>
+                            <p>Provide mental stimulation for dogs to prevent boredom and stress, promoting a happy and healthy pet with our expert tip... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/8-ways-to-socialize-your-new-puppy-12.html">
+                        <img src="https://petpediahub.online/articles/image12.webp" alt="8 Ways To Socialize Your New Puppy" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>8 Ways To Socialize Your New Puppy</h3>
+                            <p>Puppy socialization tips: expert advice on training and dog behavior for a healthy pet. &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/9-dog-treat-recipes-perfect-for-thanksgiving-3.html">
+                        <img src="https://petpediahub.online/articles/image3.webp" alt="9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>9 Homemade Dog Treat Recipes Perfect for Thanksgiving (Vet-Approved)</h3>
+                            <p>9 easy, vet-approved Thanksgiving dog treat recipes using pumpkin, turkey, sweet potato and more. Full ingredients, inst... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/becoming-a-senior-dog-top-12-signs-your-pooch-is-aging-7.html">
+                        <img src="https://petpediahub.online/articles/image7.webp" alt="Becoming A Senior Dog: Top 12 Signs Your Pooch Is Aging" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Becoming A Senior Dog: Top 12 Signs Your Pooch Is Aging</h3>
+                            <p>As your dog ages, learn the top 12 signs of seniority and expert care tips for a happy, healthy life. &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/buckle-up-pup-road-trip-safety-amp-essentials-for-your-dog-8.html">
+                        <img src="https://petpediahub.online/articles/image8.webp" alt="Buckle Up, Pup! Road Trip Safety &amp; Essentials for Your Dog" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Buckle Up, Pup! Road Trip Safety &amp; Essentials for Your Dog</h3>
+                            <p>Buckle up with pet travel tips and dog road trip safety essentials for a fun, stress-free vacation with your furry frien... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/can-dogs-eat-chocolate-what-you-need-to-know-5.html">
+                        <img src="https://petpediahub.online/articles/image5.webp" alt="Can Dogs Eat Chocolate? What You NEED to Know!" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Can Dogs Eat Chocolate? What You NEED to Know!</h3>
+                            <p>Protect your furry friend from chocolate toxicity, learn what foods are safe and toxic for dogs, and get expert pet care... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/cloudy-eyes-in-dogs-what-it-means-and-when-to-worry-10.html">
+                        <img src="https://petpediahub.online/articles/image10.webp" alt="Cloudy Eyes in Dogs: What It Means and When to Worry" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Cloudy Eyes in Dogs: What It Means and When to Worry</h3>
+                            <p>Cloudy eyes in dogs: Learn about dog eye problems, canine cataracts, and nuclear sclerosis. Know when to see a vet for y... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/dog-burn-warning-always-test-garden-hose-water-before-playtime-6.html">
+                        <img src="https://petpediahub.online/articles/image6.webp" alt="Dog Burn Warning: Always Test Garden Hose Water Before Playtime" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Dog Burn Warning: Always Test Garden Hose Water Before Playtime</h3>
+                            <p>Protect your dog from burns with our expert garden hose safety tips, ensuring a fun and safe summer playtime for your fu... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/dog-food-recalled-due-to-potential-plastic-contamination-1.html">
+                        <img src="https://petpediahub.online/articles/image1.webp" alt="Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Dog Food Recalled for Plastic Contamination: 2026 Safety Guide for Pet Owners</h3>
+                            <p>Fromm Family Foods recalled dog food for plastic contamination in 2025-2026. Learn the warning signs, what to do if your... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/how-much-exercise-does-your-dog-need-9.html">
+                        <img src="https://petpediahub.online/articles/image9.webp" alt="How Much Exercise Does Your Dog Need?" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>How Much Exercise Does Your Dog Need?</h3>
+                            <p>Exercise needs for dogs vary by breed, age, and size. Learn how to determine the perfect daily exercise routine for your... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://petpediahub.online/articles/the-ultimate-gift-guide-for-dog-lovers-amp-dogs-2.html">
+                        <img src="https://petpediahub.online/articles/image2.webp" alt="The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026 (US &amp; UK)" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>The Ultimate Gift Guide for Dog Lovers &amp; Dogs: Best Picks for 2026 (US &amp; UK)</h3>
+                            <p>Discover the best gifts for dog lovers and dogs in 2026 — from personalised keepsakes and interactive puzzle toys to GPS... &mdash; <small>2026-03-02T23:38:42.538769</small></p>
+                        </div>
+                    </a>
+                </li>
+                <!-- If you have not run generate_index.py yet, your articles -->
+                <!-- are still accessible via the JS card layout below -->
+            </ul>
+        </div>
+
+        <!-- JS-powered full card layout (loads after page ready) -->
+        <div class="news-articles" id="articles-container"></div>
+
     </main>
-    <footer class="footer">
-        <p>&copy; 2026 PetPedia Hub — All rights reserved</p>
+
+    <footer class="footer" style="background: #f8f9fa; padding: 40px 0 20px; margin-top: 60px; border-top: 1px solid #eee;">
+        <div class="container">
+            <div class="footer-socials" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                <a href="#" style="width:40px;height:40px;background:#1877F2;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="width:40px;height:40px;background:#1DA1F2;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="width:40px;height:40px;background:#E1306C;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 20px; font-weight: 500;">
+                <a href="about.html" style="color: #555; text-decoration: none;">About Us</a>
+                <a href="contact.html" style="color: #555; text-decoration: none;">Contact Us</a>
+                <a href="privacy.html" style="color: #555; text-decoration: none;">Privacy Policy</a>
+                <a href="terms.html" style="color: #555; text-decoration: none;">Terms &amp; Conditions</a>
+                <a href="dmca.html" style="color: #555; text-decoration: none;">DMCA</a>
+            </div>
+            <div class="copyright" style="text-align: center; color: #888; font-size: 0.9rem; border-top: 1px solid #ddd; padding-top: 20px;">
+                <p>&copy; 2026 PetPedia Hub - All rights reserved</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+    // When JS loads, hide the static list (users see the full card layout instead)
+    // Googlebot sees the static list above, users see the nice cards
+    document.addEventListener('DOMContentLoaded', function() {
+        var staticList = document.getElementById('seo-article-list');
+        if (staticList) staticList.classList.add('hidden');
+    });
+    </script>
+    <script src="script.js?v=1.0" defer></script>
 </body>
 </html>
